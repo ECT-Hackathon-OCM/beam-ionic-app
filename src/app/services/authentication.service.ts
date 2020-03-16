@@ -31,7 +31,6 @@ export class AuthenticationService {
 
 
   login() {
-    console.log('hello');
     var dummy_response = {
       user_id: '007',
       user_name: 'test'
