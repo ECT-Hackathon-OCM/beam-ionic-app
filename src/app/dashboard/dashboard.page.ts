@@ -15,10 +15,7 @@ export class DashboardPage implements OnInit {
 
   ngOnInit() {
   }
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
+  
   ionViewDidEnter() {
     this.barChartPopulation();
     this.pieChartBrowser();

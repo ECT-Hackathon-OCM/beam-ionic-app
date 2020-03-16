@@ -9,6 +9,10 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: './dashboard/dashboard.module#DashboardPageModule',
     canActivate: [GuardService]
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 

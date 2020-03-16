@@ -1,13 +1,20 @@
 <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
   <ion-header>
-    <ion-toolbar color="medium">
+    <ion-toolbar color="tertiary">
       <ion-title>Harit Kumar</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item><ion-icon name="flash-outline"></ion-icon> Dashboard</ion-item>
-      <ion-item (click)="logoutUser()"><ion-icon name="power-outline"></ion-icon> Logout</ion-item>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/dashboard']"><ion-icon name="flash-outline"></ion-icon> Dashboard</ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/profile']"><ion-icon name="person-outline"></ion-icon> Profile</ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item (click)="logoutUser()"><ion-icon name="power-outline"></ion-icon> Logout</ion-item>
+      </ion-menu-toggle>
     </ion-list>
   </ion-content>
 </ion-menu>
