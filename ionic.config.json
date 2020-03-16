@@ -1,5 +1,7 @@
 {
   "name": "Beam",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
