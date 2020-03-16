@@ -21,7 +21,9 @@ export class AppComponent {
   ) {
     this.initializeApp();
   }
-
+  logoutUser(){
+    this.authenticationService.logout();
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
