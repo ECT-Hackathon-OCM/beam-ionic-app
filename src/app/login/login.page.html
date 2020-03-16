@@ -1,5 +1,33 @@
- <ion-button (click)="loginUser()">
-    login
-  </ion-button>
- 
-  <a [routerLink]="['/dashboard']">Go to dashboard</a>
+  <ion-grid class="aligner">
+    <ion-row style="text-align: center;">
+    <ion-col size="10" offset="1">
+
+    <ion-img style="height:20%" src="../assets/icon_sqr.png"></ion-img>
+    <ion-card-title>Sign In</ion-card-title>
+    <ion-card-subtitle>access to the application</ion-card-subtitle>
+
+         <ion-item>
+            <ion-label position="stacked">Username <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text"></ion-input>
+          </ion-item>
+
+           <ion-item>
+            <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="password"></ion-input>
+          </ion-item>
+
+
+      <ion-button (click)="loginUser()" color="warning">
+        <ion-icon name="log-in-outline"></ion-icon> Sign In
+      </ion-button>
+
+
+      <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-card-subtitle>&copy;2020, BEAM </ion-card-subtitle>
+  </ion-toolbar>
+</ion-footer>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  
