@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import * as HighCharts from 'highcharts'; 
 import { Chart } from 'chart.js';
@@ -9,9 +9,6 @@ import { Chart } from 'chart.js';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  @ViewChild("barCanvas") barCanvas: ElementRef;
-
-  private barChart: Chart;
   constructor(
     private menu: MenuController
     ) { }
@@ -28,7 +25,7 @@ export class DashboardPage implements OnInit {
   }
   barChartPopulation() {
 
-    this.barChart = new Chart(this.barCanvas.nativeElement, {
+    new Chart('barCanvas', {
       type: "bar",
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
